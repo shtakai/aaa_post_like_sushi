@@ -8,7 +8,11 @@ jobs:
     docker:
     # specify the version you desire here
     - image: circleci/ruby:2.5.3-node-browsers
-
+    - image: circleci/postgres:9.4.16-alpine-postgis
+      environment:
+        POSTGRES_USER: postgres
+        POSTGRES_DB: aaa_poster_test
+    - image: redis:4.0.8-alpine
     # Specify service dependencies here if necessary
     # CircleCI maintains a library of pre-built images
     # documented at https://circleci.com/docs/2.0/circleci-images/
