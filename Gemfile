@@ -31,7 +31,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # gem 'pundit'
 #
 # # Authentication
-# gem 'devise'
+gem 'devise'
 # gem 'omniauth-facebook'
 # gem 'simple_form'
 # gem 'sidekiq'
