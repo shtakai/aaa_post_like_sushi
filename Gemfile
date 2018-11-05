@@ -42,7 +42,7 @@ gem 'devise'
 #
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'faker', require: false # for sample data in development
+  gem 'faker'
   gem 'pry-rails'
   gem 'factory_bot_rails', '~> 4.11.0'
   gem 'rspec-rails', '~> 3.8.0'
@@ -76,6 +76,7 @@ group :test do
   gem 'shoulda-matchers',
       git: 'https://github.com/thoughtbot/shoulda-matchers.git',
       branch: 'rails-5'
+  gem 'rails-controller-testing' # If you are using Rails 5.x
   gem "rspec_junit_formatter"
 end
 
