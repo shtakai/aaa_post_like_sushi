@@ -44,6 +44,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'faker', require: false # for sample data in development
   gem 'pry-rails'
+  gem 'factory_bot_rails', '~> 4.11.0'
+  gem 'rspec-rails', '~> 3.8.0'
 end
 
 group :development do
@@ -65,8 +67,6 @@ group :development do
 end
 
 group :test do
-  gem 'factory_bot_rails', '~> 4.11.0'
-  gem 'rspec-rails', '~> 3.8.0'
   # gem 'vcr'
   gem 'webmock'
   gem 'capybara', '~> 2.15.4'
