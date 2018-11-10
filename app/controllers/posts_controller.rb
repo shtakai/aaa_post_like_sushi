@@ -12,7 +12,7 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.build(post_params)
     if @post.save
-      flash[:notice] = 'post okay'
+      flash[:notice] = 'new post created'
       redirect_to posts_path
     else
       render new
