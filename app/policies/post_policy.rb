@@ -6,7 +6,18 @@ class PostPolicy
     @post = post
   end
 
-  def update?
-    user.admin? or not post.published?
+  def user_is_post_user
+    post.user == user
   end
+
+  def pass_true
+    true
+  end
+
+  alias_method :create?, :user_is_post_user
+  alias_method :new?, :user_is_post_user
+  alias_method :show? , :pass_true
+  alias_method :edit?, :user_is_post_user
+  alias_method :update?, :user_is_post_user
+  alias_method :destroy?, :user_is_post_user
 end
