@@ -50,6 +50,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'debug_helper', '~> 2.0.0'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.  gem 'meta_request'
   gem 'web-console', '>= 3.3.0'
   gem 'meta_request'
@@ -69,6 +70,7 @@ end
 
 group :test do
   # gem 'vcr'
+  gem 'bullet', require: true
   gem 'webmock'
   gem 'capybara', '~> 2.15.4'
   gem 'selenium-webdriver'
