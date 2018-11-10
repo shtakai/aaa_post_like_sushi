@@ -79,6 +79,7 @@ group :test do
       branch: 'rails-5'
   gem 'rails-controller-testing' # If you are using Rails 5.x
   gem "rspec_junit_formatter"
+  gem 'pundit-matchers', '~> 1.6.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
