@@ -31,6 +31,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'pundit'
 gem 'slim-rails', '~> 3.2'
 
+gem 'jquery-rails'
+gem 'turbolinks'
 # # Authentication
 gem 'devise'
 # gem 'omniauth-facebook'
