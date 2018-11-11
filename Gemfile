@@ -27,9 +27,10 @@ gem 'figaro'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-# # Authorization
-# gem 'pundit'
-#
+
+gem 'pundit'
+gem 'slim-rails', '~> 3.2'
+
 # # Authentication
 gem 'devise'
 # gem 'omniauth-facebook'
@@ -46,6 +47,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'factory_bot_rails', '~> 4.11.0'
   gem 'rspec-rails', '~> 3.8.0'
+  gem 'debug_helper', '~> 2.0.0'
 end
 
 group :development do
@@ -68,6 +70,7 @@ end
 
 group :test do
   # gem 'vcr'
+  gem 'bullet', require: true
   gem 'webmock'
   gem 'capybara', '~> 2.15.4'
   gem 'selenium-webdriver'
@@ -78,6 +81,7 @@ group :test do
       branch: 'rails-5'
   gem 'rails-controller-testing' # If you are using Rails 5.x
   gem "rspec_junit_formatter"
+  gem 'pundit-matchers', '~> 1.6.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
