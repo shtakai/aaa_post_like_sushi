@@ -4,7 +4,6 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.newest(10)
-    logger.debug DebugHelper.show @posts
   end
 
   def show
@@ -38,9 +37,9 @@ class PostsController < ApplicationController
       render :edit
     end
   end
-  
+
   private
-  
+
   def post_params
     params.require(:post).permit(:title, :content)
   end
