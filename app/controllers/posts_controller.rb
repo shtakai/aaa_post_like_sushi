@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
-  before_action :post_by_id, only: %i(show edit update)
+  before_action :post_by_id, only: %i(show edit update destroy)
 
   def index
     @posts = Post.newest(10)
@@ -36,6 +36,12 @@ class PostsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    authorize @post
+    @post.destroy
+    redirect_to posts_path, notice: "post deleted #{@post.id}"
   end
 
   private
