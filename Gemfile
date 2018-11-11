@@ -47,10 +47,10 @@ group :development, :test do
   gem 'pry-rails'
   gem 'factory_bot_rails', '~> 4.11.0'
   gem 'rspec-rails', '~> 3.8.0'
+  gem 'debug_helper', '~> 2.0.0'
 end
 
 group :development do
-  gem 'debug_helper', '~> 2.0.0'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.  gem 'meta_request'
   gem 'web-console', '>= 3.3.0'
   gem 'meta_request'
