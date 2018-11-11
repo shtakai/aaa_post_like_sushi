@@ -22,7 +22,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to posts_path, notice: 'new post created'
     else
-      render new
+      render :new
     end
   end
 
@@ -35,7 +35,7 @@ class PostsController < ApplicationController
     if @post.update(post_params)
       redirect_to posts_path, notice: 'post updated'
     else
-      render edit, warn: 'not updated'
+      render :edit
     end
   end
   
