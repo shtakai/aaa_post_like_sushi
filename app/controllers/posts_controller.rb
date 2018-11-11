@@ -19,7 +19,7 @@ class PostsController < ApplicationController
     @post = current_user.posts.build(post_params)
     authorize @post
     if @post.save
-      redirect_to posts_path, notice: 'new post created'
+      redirect_to @post, notice: 'new post created'
     else
       render :new
     end
@@ -32,7 +32,7 @@ class PostsController < ApplicationController
   def update
     authorize @post
     if @post.update(post_params)
-      redirect_to posts_path, notice: 'post updated'
+      redirect_to @post, notice: 'post updated'
     else
       render :edit
     end
