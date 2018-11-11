@@ -5,6 +5,8 @@
   |  by #{post.user.username} (id: #{post.user.id})
   - if policy(post).update?
     = link_to "Edit post", edit_post_path(post)
+  - if policy(post).destroy?
+    = link_to "Delete post", post_path(post), method: :delete, confirm: 'Are you sure?'
   .content
     = post.content
 /
