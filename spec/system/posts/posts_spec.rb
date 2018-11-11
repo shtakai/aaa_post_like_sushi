@@ -13,7 +13,7 @@ RSpec.describe 'create post', type: :system do
         fill_in 'Title', with: Faker::Name.unique.name
         fill_in 'Content', with: Faker::Hipster.sentence(5)
         click_button 'Create Post'
-        expect(current_path).to eq posts_path
+        expect(current_path).to eq post_path(Post.last)
         expect(page).to have_content('new post created')
       end
     end
