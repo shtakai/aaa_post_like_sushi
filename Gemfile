@@ -33,6 +33,7 @@ gem 'slim-rails', '~> 3.2'
 
 # # Authentication
 gem 'devise'
+gem 'devise-jwt'
 # gem 'omniauth-facebook'
 # gem 'simple_form'
 # gem 'sidekiq'
