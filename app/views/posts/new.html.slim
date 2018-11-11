@@ -2,12 +2,4 @@ h1
   | new
 h2
   | new post
-p
-  = @post
-
-  = form_with model: @post do |form|
-    = form.label :title
-    = form.text_field :title
-    = form.label :content
-    = form.text_area :content
-    = form.submit 'Create Post'
+= render 'form'
